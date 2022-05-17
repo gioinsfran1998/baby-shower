@@ -1,72 +1,36 @@
-import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-import React from 'react';
-
-import { useStore } from '@/store/useStore';
-import { MenuUnfoldOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Dropdown, Menu } from 'antd';
-import Cookie from 'js-cookie';
-
-import shallow from 'zustand/shallow';
+import mayra from 'public/images/mayra.jpg';
 
 import * as S from './style';
 
-const PopoverItems = [
-  {
-    title: 'Profile',
-    link: '/profile'
-  },
-  {
-    title: 'Logout',
-    link: '/logout'
-  }
-];
-
 const Header = () => {
-  const [toggleCollapsed] = useStore(
-    (state) => [state.toggleCollapsed],
-    shallow
-  );
-  const router = useRouter();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-
-  const handle: Record<string, () => void> = {
-    '/profile': () => console.log('profile'),
-    '/logout': () => {
-      Cookie.remove('token');
-      router.replace('/login');
-    }
-  };
-
   return (
     <S.Wrapper>
-      <S.Header>
-        <Button
-          type='text'
-          icon={<MenuUnfoldOutlined />}
-          onClick={toggleCollapsed}
-          loading={false}
-        />
-
-        <S.Group>
-          <Dropdown
-            placement='bottomLeft'
-            arrow
-            trigger={['click']}
-            overlay={
-              <Menu inlineCollapsed>
-                {PopoverItems.map((item) => (
-                  <Menu.Item key={item.link} onClick={handle[item.link]}>
-                    <span>{item.title}</span>
-                  </Menu.Item>
-                ))}
-              </Menu>
-            }
-          >
-            <S.Avatar icon={<UserOutlined />} />
-          </Dropdown>
-        </S.Group>
-      </S.Header>
+      <S.Navbar>
+        <S.ButtonGroup>
+          <S.ButtonLink href='#first-section'>
+            <S.LinkTo>Nosotros</S.LinkTo>
+          </S.ButtonLink>
+          <S.ButtonLink href='#second-section'>
+            <S.LinkTo>Ubicación</S.LinkTo>
+          </S.ButtonLink>
+          <S.ButtonLink href='#third-section'>
+            <S.LinkTo>Asistencia</S.LinkTo>
+          </S.ButtonLink>
+        </S.ButtonGroup>
+      </S.Navbar>
+      <Image
+        alt='woman'
+        src={mayra}
+        quality={100}
+        layout='fill'
+        objectFit='cover'
+      />
+      <S.Text>
+        <S.Name>Amaya Insfran</S.Name>
+        <S.SubTitle>¡Mi baby shower!</S.SubTitle>
+      </S.Text>
     </S.Wrapper>
   );
 };

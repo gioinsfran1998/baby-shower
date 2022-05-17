@@ -1,14 +1,23 @@
-import { ReactChild, ReactFragment, ReactPortal } from 'react';
+import { Fragment, ReactChild, ReactFragment, ReactPortal } from 'react';
 
+import AboutMe from '@/components/Shared/AboutMe/AboutMe';
+import DateContent from '@/components/Shared/DateContent/DateContent';
+import Event from '@/components/Shared/Event/Event';
+import Gallery from '@/components/Shared/Gallery/Gallery';
+import Gifts from '@/components/Shared/Gifts/Gifts';
+import Header from '@/components/Shared/Header/Header';
 import Layout from '@/components/Shared/Layout/Layout';
-import { GetServerSideProps } from 'next';
-import jwt_decode from 'jwt-decode';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Inicio</h1>
-    </div>
+    <Layout>
+      <Header />
+      <AboutMe />
+      <DateContent />
+      <Gallery />
+      <Gifts />
+      <Event />
+    </Layout>
   );
 };
 
@@ -16,36 +25,10 @@ Home.getLayout = function getLayout(
   page: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined
 ) {
   return (
-    <Layout>
+    <Fragment>
       <div>{page}</div>
-    </Layout>
+    </Fragment>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const { token } = req.cookies;
-
-  if (!token)
-    return {
-      redirect: {
-        destination: '/login',
-        permanent: false
-      }
-    };
-  const { authType }: any = jwt_decode(token);
-
-  if (authType !== 'Admin') {
-    return {
-      redirect: {
-        destination: '/open',
-        permanent: false
-      }
-    };
-  }
-
-  return {
-    props: {}
-  };
 };
 
 export default Home;
