@@ -64,5 +64,5 @@ export const Button = styled.button`
 
   width: 100%;
 
-  background-color: #fadcd9;
+  background-color: #f2f2f2;
 `;

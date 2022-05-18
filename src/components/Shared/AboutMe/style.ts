@@ -46,12 +46,15 @@ export const Group = styled.div`
 `;
 
 export const LeftContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 
   height: 250px;
   width: 250px;
 
-  background-color: #fadcd9;
+  background-color: #f2f2f2;
 
   @media (max-width: 540px) {
     max-height: 350px;
@@ -62,12 +65,15 @@ export const LeftContent = styled.div`
 `;
 
 export const RightContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 
   height: 250px;
   width: 250px;
 
-  background-color: #fadcd9;
+  background-color: #f2f2f2;
 
   @media (max-width: 540px) {
     max-height: 350px;
@@ -77,11 +83,14 @@ export const RightContent = styled.div`
   }
 `;
 
-export const GroupText = styled.div`
+export const GroupText = styled.div<{ pt?: boolean }>`
   display: flex;
   flex-direction: column;
 
-  padding: 10px;
+  padding: 15px;
+
+  padding-top: ${({ pt }) => (pt ? 15 : 0)}px;
+  padding-bottom: ${({ pt }) => (pt ? 0 : 15)}px;
 `;
 
 export const Name = styled.h6`
@@ -105,7 +114,26 @@ export const AboutText = styled.h4`
 
 export const TextBox = styled.span`
   font-family: 'Open Sans', sans-serif;
-
+  font-weight: 300;
   font-size: 14px;
   line-height: 20px;
+`;
+
+export const ImageCircle = styled.div`
+  display: flex;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+export const Absolute = styled.div`
+  margin-top: 15px;
+
+  position: relative;
 `;

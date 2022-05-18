@@ -15,9 +15,9 @@ export const Center = styled.div`
   position: relative;
 
   max-width: 500px;
-  padding: 20px 0px;
+  padding: 40px 0px;
 
-  background-color: #fadcd9;
+  background-color: #fafafa;
 `;
 export const Extra = styled.div`
   display: flex;
@@ -29,6 +29,7 @@ export const Extra = styled.div`
   width: 100%;
 
   background-color: #fafafa;
+  opacity: 0.6;
 `;
 
 export const CoverImage = styled.div`
@@ -42,7 +43,7 @@ export const CoverImage = styled.div`
 export const Markets = styled.div`
   display: flex;
 
-  margin-top: 20px;
+  margin: 20px 0px;
 `;
 
 export const Title = styled.h1`
