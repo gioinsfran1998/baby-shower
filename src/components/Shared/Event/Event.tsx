@@ -14,7 +14,7 @@ const Event = () => {
       <S.Content>
         <S.Form>
           <S.Title>Confirmar Asistencia</S.Title>
-          <FormConfirm handleSubmit={handleSubmit} loading={false} />
+          <FormConfirm />
         </S.Form>
       </S.Content>
       <S.Footer>

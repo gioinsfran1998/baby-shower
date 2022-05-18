@@ -3,21 +3,52 @@ import React, { FC } from 'react';
 import { Form, Field, Formik } from 'formik';
 import { initialValues } from './initialValues';
 import { schema } from './schema';
+import { useMutation } from '@apollo/client';
 
 import * as S from './style';
+import { NEW_USER } from '@/queries/user';
+import { notification } from 'antd';
 
-export interface FormConfirmTypes {
-  handleSubmit: (values: Record<string, unknown>) => void;
-  loading: boolean;
-}
+export const FormConfirm: FC = () => {
+  const [newUser, { loading: loadingAdd }] = useMutation(NEW_USER);
 
-export const FormConfirm: FC<FormConfirmTypes> = (handleSubmit, loading) => {
+  const handleAddUser = (values: {
+    firstName: any;
+    lastName: any;
+    phoneNumber: any;
+  }) => {
+    console.log('values', values);
+    newUser({
+      variables: {
+        input: {
+          firstName: values?.firstName,
+          lastName: values?.lastName,
+          phoneNumber: parseInt(values?.phoneNumber)
+        }
+      }
+    })
+      .then(() => {
+        notification.success({
+          message: 'Confirmado!',
+          description: 'Presencia registrada.'
+        });
+      })
+      .catch((err) => {
+        notification.error({
+          message: 'Ops!',
+          description: err.message
+        });
+      });
+  };
+
   return (
     <S.Wrapper>
       <Formik
         initialValues={initialValues}
         enableReinitialize
-        onSubmit={async (values) => console.log(values)}
+        onSubmit={async (values) => {
+          handleAddUser(values);
+        }}
         validationSchema={schema}
       >
         {() => {
@@ -64,7 +95,9 @@ export const FormConfirm: FC<FormConfirmTypes> = (handleSubmit, loading) => {
                 </Field>
               </S.InputGroup>
 
-              <S.Button type='submit'>Enviar</S.Button>
+              <S.Button type='submit'>
+                {loadingAdd ? '...enviando' : 'Enviar'}
+              </S.Button>
             </Form>
           );
         }}
