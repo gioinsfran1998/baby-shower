@@ -42,6 +42,8 @@ export const CoverImage = styled.div`
 
 export const Markets = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   margin: 20px 0px;
 `;
@@ -70,15 +72,9 @@ export const ImageContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  background-color: #fafafa;
-
   padding: 10px;
   border-radius: 4px;
   margin: 0px 10px;
-
-  & ~ & {
-    background-color: #36c;
-  }
 `;
 
 export const Text = styled.p`

@@ -2,9 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 
 import china from 'public/images/shoppingChina.png';
-import cellshop from 'public/images/cellshop.svg';
+import gap from 'public/images/gap.png';
 import ballon2 from 'public/images/ballon2.png';
 import carrito from 'public/images/carritoBebe.png';
+import babyshop from 'public/images/babyshop.png';
 
 import * as S from './style';
 
@@ -58,12 +59,15 @@ const Gifts = () => {
               alt='china'
               src={china}
               quality={100}
-              height='40'
-              width='120'
+              height='45'
+              width='135'
             />
           </S.ImageContainer>
           <S.ImageContainer>
-            <Image src={cellshop} height='50' width='100' />
+            <Image src={gap} height='110' width='110' />
+          </S.ImageContainer>
+          <S.ImageContainer>
+            <Image src={babyshop} height='110' width='130' />
           </S.ImageContainer>
         </S.Markets>
       </S.Center>

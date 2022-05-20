@@ -10,7 +10,7 @@ background;
 import * as S from './style';
 
 const DateContent = () => {
-  let babyShowerDate = new Date('Jun 04, 2022 17:00:00');
+  let babyShowerDate = new Date('Jun 10, 2022 17:00:00');
 
   const [days, hours, minutes, seconds] = useCountDown(babyShowerDate);
 

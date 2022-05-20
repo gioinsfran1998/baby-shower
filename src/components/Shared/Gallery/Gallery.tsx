@@ -18,9 +18,7 @@ const Gallery = () => {
         <S.Location>
           <S.SubTitle>Ubicación</S.SubTitle>
           <Link href='https://goo.gl/maps/ULnnewiUA6KX85iY7'>
-            {/* <S.CircleLocation> */}
             <S.LottieGif autoPlay loop animationData={googleMaps} />
-            {/* </S.CircleLocation> */}
           </Link>
           <S.TextBox>Avda. Las Acacias c/ ka'a .</S.TextBox>
           <S.SubTitle>Fecha</S.SubTitle>
