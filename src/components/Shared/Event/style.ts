@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Lottie from 'lottie-react';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ export const Form = styled.div`
   margin: 0px 20px;
   margin-bottom: -100px;
   max-width: 500px;
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 20px;
 
   z-index: 1;
@@ -61,5 +62,11 @@ export const Title = styled.h1`
 
 export const Gio = styled.span`
   font-family: 'Caveat Brush', cursive;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+`;
+
+export const LottieGif = styled(Lottie)`
+  margin-left: -5px;
+  height: 40px;
+  width: 40px;
 `;

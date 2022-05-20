@@ -73,7 +73,7 @@ export const ImageContainer = styled.div`
   background-color: #fafafa;
 
   padding: 10px;
-  border-radius: 16px;
+  border-radius: 4px;
   margin: 0px 10px;
 
   & ~ & {

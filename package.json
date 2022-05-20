@@ -28,6 +28,7 @@
     "graphql-tools": "^8.2.7",
     "jotai": "^1.6.4",
     "lodash": "^4.17.21",
+    "lottie-react": "^2.2.1",
     "micro": "^9.3.4",
     "mongoose": "^6.3.3",
     "next": "^12.1.6",

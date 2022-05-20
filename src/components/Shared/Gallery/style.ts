@@ -1,6 +1,6 @@
+import Lottie from 'lottie-react';
 import styled from 'styled-components';
-import { MdLocationOn } from 'react-icons/md';
-
+import { IoLogoWhatsapp } from 'react-icons/io';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@ export const CoverImage = styled.div`
   flex-direction: column;
   overflow: hidden;
 
-  border-radius: 16px;
+  border-radius: 4px;
   margin: 20px;
   max-width: 500px;
 
@@ -73,13 +73,9 @@ export const TextBox = styled.span`
   font-size: 14px;
   line-height: 20px;
   padding: 0px 5px;
-`;
 
-export const LocationIcon = styled(MdLocationOn).attrs(() => {
-  return {
-    size: 30
-  };
-})``;
+  margin-bottom: 10px;
+`;
 
 export const CircleLocation = styled.div`
   display: flex;
@@ -88,16 +84,38 @@ export const CircleLocation = styled.div`
   cursor: pointer;
 
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
-
-  background-color: #fafafa;
+  height: 70px;
+  width: 70px;
 
   &:active {
     opacity: 0.5;
+    background-color: #535c68;
   }
 
   &:hover {
     opacity: 0.9;
+    background-color: #535c68;
   }
+`;
+
+export const LottieGif = styled(Lottie)`
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+`;
+
+export const Whatsapp = styled(IoLogoWhatsapp).attrs(() => {
+  return {
+    size: 20
+  };
+})`
+  margin-left: 5px;
+  margin-bottom: -3px;
 `;

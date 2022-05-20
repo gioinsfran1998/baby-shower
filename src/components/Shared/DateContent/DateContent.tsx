@@ -2,7 +2,10 @@ import React from 'react';
 
 import { useCountDown } from '@/hooks/useCountDown';
 
-import carrito from '../../../../public/images/carritoBebe.png';
+import ballon from 'public/images/ballon1.png';
+import background from 'public/images/background_pink.jpeg';
+
+background;
 
 import * as S from './style';
 
@@ -16,10 +19,17 @@ const DateContent = () => {
       <S.Comment>Acompañanos a celebrar juntos</S.Comment>
       <S.Title>Mi dulce llegada</S.Title>
       <S.CoverImage
-        alt='carrito'
-        width={50}
-        height={50}
-        src={carrito}
+        alt='background'
+        src={background}
+        quality={100}
+        layout='fill'
+        objectFit='cover'
+      />
+      <S.BallonImage
+        alt='ballon'
+        width={60}
+        height={60}
+        src={ballon}
         quality={100}
       />
       <S.Date>

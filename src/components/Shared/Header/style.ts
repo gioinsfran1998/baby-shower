@@ -12,18 +12,6 @@ export const Wrapper = styled.div`
   min-height: 700px;
 `;
 
-export const Title = styled.h1`
-  font-family: 'Parisienne', cursive;
-
-  font-size: 20px;
-  padding-left: 10px;
-  letter-spacing: 1px;
-
-  margin: 0;
-
-  color: #fafafa;
-`;
-
 export const Navbar = styled.div`
   display: flex;
   align-items: center;
@@ -47,7 +35,9 @@ export const ButtonLink = styled(Link)``;
 
 export const LinkTo = styled.a`
   text-transform: uppercase;
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'Merriweather', serif;
+
+  font-weight: 400;
 
   font-size: 14px;
   padding: 5px 10px;
@@ -65,13 +55,22 @@ export const Text = styled.div`
 
 export const SubTitle = styled.span`
   font-family: 'Caveat Brush', cursive;
+  /* font-family: 'Roboto Flex', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Merriweather', serif;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
   text-align: center;
   white-space: nowrap;
 
   color: #ffffff;
 
-  font-size: 25px;
+  font-size: 20px;
   margin: 0px;
+
+  opacity: 0.8;
 `;
 
 export const Name = styled.h3`

@@ -58,11 +58,49 @@ export const Error = styled.span`
 export const Button = styled.button`
   border: none;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 16px;
-  padding: 5px 20px;
   border-radius: 3px;
+  height: 40px;
 
   width: 100%;
 
-  background-color: #f2f2f2;
+  background-color: #2ecc71;
+
+  color: #fafafa;
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+`;
+
+export const Loading = styled.div`
+  display: inline-block;
+
+  &::after {
+    content: ' ';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 6px solid #fafafa;
+    border-color: #fafafa transparent #fafafa transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 `;

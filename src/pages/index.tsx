@@ -24,11 +24,7 @@ const Home = () => {
 Home.getLayout = function getLayout(
   page: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined
 ) {
-  return (
-    <Fragment>
-      <div>{page}</div>
-    </Fragment>
-  );
+  return <Fragment>{page}</Fragment>;
 };
 
 export default Home;

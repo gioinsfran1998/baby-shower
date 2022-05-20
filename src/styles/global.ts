@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
 
+
   }
 
   html, body, #__next {
@@ -26,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     font-weight: 400px;
     background-color: #fafafa;
-    width: 100%;
+
   }
 
 

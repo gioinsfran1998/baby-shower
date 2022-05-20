@@ -96,7 +96,7 @@ export const FormConfirm: FC = () => {
               </S.InputGroup>
 
               <S.Button type='submit'>
-                {loadingAdd ? '...enviando' : 'Enviar'}
+                {loadingAdd ? <S.Loading /> : 'Enviar'}
               </S.Button>
             </Form>
           );

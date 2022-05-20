@@ -11,7 +11,8 @@ export const Wrapper = styled.div`
   height: 400px;
   padding: 30px 0px;
 
-  background-color: #fadcd9;
+  position: relative;
+  /* background-color: #fadcd9; */
 `;
 
 export const Title = styled.h1`
@@ -20,7 +21,8 @@ export const Title = styled.h1`
   font-size: 30px;
   letter-spacing: 0px;
   line-height: 60px;
-  margin-bottom: -15px;
+  margin-bottom: -5px;
+  z-index: 1;
 `;
 
 export const SubTitle = styled.h3`
@@ -39,16 +41,23 @@ export const Comment = styled.span`
 
   font-size: 10px;
   letter-spacing: 4px;
+
+  z-index: 1;
 `;
 
 export const CoverImage = styled(Image)`
   margin-top: 10px;
 `;
 
+export const BallonImage = styled(Image)`
+  opacity: 0.7;
+`;
+
 export const Date = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 `;
 
 export const BoxDate = styled.div`
@@ -61,7 +70,7 @@ export const BoxDate = styled.div`
   width: 70px;
   height: 70px;
   font-size: 30px;
-  border-radius: 16px;
+  border-radius: 50px;
 
   @media (max-width: 400px) {
     width: 60px;
