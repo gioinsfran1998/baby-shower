@@ -32,7 +32,8 @@ const AboutMe = () => {
             <S.Name>Giovanni Insfran</S.Name>
             <S.AboutText>Hola, soy el Papá.</S.AboutText>
             <S.TextBox>
-              Te ame desde el primer instante que supe que venias en camino ❤️
+              Puedo afirmar que la ame desde el primer instante que supe que
+              venía en camino. ❤️
               <br />
               Espero pronto tenerte presente con nosotros.
             </S.TextBox>
@@ -45,10 +46,10 @@ const AboutMe = () => {
             <S.Name>Mayra Gonzalez</S.Name>
             <S.AboutText>Hola, soy la Mamá.</S.AboutText>
             <S.TextBox>
-              Más que emocionada por conocerte.
+              Más que emocionada por conocerla.
               <br />
-              Ella es el regalo mas lindo que Dios me brindo, aunque aun no
-              pueda tenerte en mis brazos, sos todo lo que siempre soñe 💖
+              Ella es el regalo más lindo que Dios me brindo, aunque aún no
+              pueda tenerla en mis brazos, es todo lo que siempre soñé. 💖
             </S.TextBox>
           </S.GroupText>
         </S.LeftContent>

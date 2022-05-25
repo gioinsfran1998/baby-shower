@@ -43,15 +43,23 @@ const Gifts = () => {
         />
       </S.Extra>
       <S.Center>
+        <S.Title>Costo</S.Title>
+        <S.Text>
+          Estamos cobrando un precio de <strong>60.000Gs</strong> con
+          agendamiento previo, para que pasen y disfruten de lo que les tenemos
+          preparados.
+          <br />
+          Los pagos se pueden realizar vía depósito o transferencia bancaria:
+          <br />- Caja de Ahorro <strong>Nº 45-1406206</strong>, Banco Familiar.
+          <strong>Giovanni Insfran</strong>, C.I: <strong>5.199.671</strong>
+          <br />O acercándose a la shop del surtidor integral Bota.
+          <br />
+        </S.Text>
         <S.Title>Lista de Regalos</S.Title>
         <S.Text>
-          Nuestro mejor regalo es contar tu presencia, por lo que les deseamos
-          que pasen y disfruten de lo que les tenemos preparados.
-          <br />
-          Si desean regalarle algo en especial a la princesa, optamos por
-          seleccionar algunas ideas en estas tiendas en las cuales ya cuentan
-          con la lista de opciones, de todos modos cualquier otra alternativa es
-          bienvenida.
+          Optamos por seleccionar algunas ideas en estas tiendas en las cuales
+          ya cuentan con la lista de opciones, de todos modos cualquier otra
+          alternativa es bienvenida.
         </S.Text>
         <S.Markets>
           <S.ImageContainer>

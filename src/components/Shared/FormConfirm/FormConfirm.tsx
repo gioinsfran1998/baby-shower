@@ -17,7 +17,6 @@ export const FormConfirm: FC = () => {
     lastName: any;
     phoneNumber: any;
   }) => {
-    console.log('values', values);
     newUser({
       variables: {
         input: {
@@ -29,8 +28,8 @@ export const FormConfirm: FC = () => {
     })
       .then(() => {
         notification.success({
-          message: 'Confirmado!',
-          description: 'Presencia registrada.'
+          message: 'Presencia registrada!',
+          description: 'Confirmaste tu presencia.'
         });
       })
       .catch((err) => {
