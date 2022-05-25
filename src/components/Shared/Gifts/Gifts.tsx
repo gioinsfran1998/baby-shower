@@ -45,14 +45,17 @@ const Gifts = () => {
       <S.Center>
         <S.Title>Costo</S.Title>
         <S.Text>
-          Estamos cobrando un precio de <strong>60.000Gs</strong> con
-          agendamiento previo, para que pasen y disfruten de lo que les tenemos
-          preparados.
+          Acompáñanos a celebrar esta dulce espera con un costo de
+          <strong> 60.000Gs</strong> por persona con agendamiento previo, para
+          que pasen y disfruten de lo que les tenemos preparados.
           <br />
           Los pagos se pueden realizar vía depósito o transferencia bancaria:
           <br />- Caja de Ahorro <strong>Nº 45-1406206</strong>, Banco Familiar.
-          <strong>Giovanni Insfran</strong>, C.I: <strong>5.199.671</strong>
+          <strong> Giovanni Insfran</strong>, C.I: <strong>5.199.671</strong>
           <br />O acercándose a la shop del surtidor integral Bota.
+          <br />
+          <br />
+          <strong>Tiempo para abonar y confirmar hasta el 5 de junio.</strong>
           <br />
         </S.Text>
         <S.Title>Lista de Regalos</S.Title>

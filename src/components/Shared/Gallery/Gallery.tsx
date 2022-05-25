@@ -22,7 +22,7 @@ const Gallery = () => {
           </Link>
           <S.TextBox>Avda. Las Acacias c/ ka'a .</S.TextBox>
           <S.SubTitle>Fecha</S.SubTitle>
-          <S.TextBox>04 de Junio a las 16:00hs</S.TextBox>
+          <S.TextBox>10 de Junio a partir de las 17:00hs</S.TextBox>
           <S.SubTitle>Contacto</S.SubTitle>
           <S.TextBox>
             +595 983 102765
